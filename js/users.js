@@ -328,3 +328,90 @@ async function createUser() {
     }
 
 }
+async function loadUsers() {
+
+    const {
+        data,
+        error
+    } =
+        await supabaseClient
+
+            .from("admins")
+
+            .select(`
+                id,
+                user_id,
+                employee_id,
+                name,
+                role,
+                active,
+                created_at
+            `)
+
+            .order(
+                "created_at",
+                {
+                    ascending: false
+                }
+            );
+
+
+    if (error) {
+
+        console.error(error);
+
+        return;
+    }
+
+
+    const container =
+        document.getElementById(
+            "usersContainer"
+        );
+
+
+    container.innerHTML = "";
+
+
+    data.forEach(
+        user => {
+
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+
+            row.className =
+                "user-row";
+
+
+            row.innerHTML = `
+
+                <strong>
+                    ${user.name}
+                </strong>
+
+                <span>
+                    ${user.role}
+                </span>
+
+                <span>
+                    ${
+                        user.active
+                        ? "نشط"
+                        : "غير نشط"
+                    }
+                </span>
+
+            `;
+
+
+            container.appendChild(
+                row
+            );
+
+        }
+    );
+
+}
