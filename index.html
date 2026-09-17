@@ -117,6 +117,26 @@
                 </div>
 
 
+               <div class="content">
+
+    <div class="section-header">
+
+        <h2>
+            إدارة المستخدمين
+        </h2>
+
+        <button id="addUserBtn">
+            + إضافة مستخدم
+        </button>
+
+    </div>
+
+
+    <div id="usersContainer">
+
+    </div>
+
+</div> 
                 <div class="content">
 
                     <div class="section-header">
@@ -157,6 +177,94 @@
     </div>
 
 
+    <div
+    id="userModal"
+    class="modal hidden"
+>
+
+    <div class="modal-box">
+
+        <h2>
+            إضافة مستخدم
+        </h2>
+
+
+        <label>
+            الموظف
+        </label>
+
+        <select id="userEmployee">
+
+            <option value="">
+                اختر الموظف
+            </option>
+
+        </select>
+
+
+        <label>
+            البريد الإلكتروني
+        </label>
+
+        <input
+            type="email"
+            id="userEmail"
+            placeholder="employee@company.com"
+        >
+
+
+        <label>
+            كلمة المرور
+        </label>
+
+        <input
+            type="password"
+            id="userPassword"
+            placeholder="كلمة المرور"
+        >
+
+
+        <label>
+            الصلاحية
+        </label>
+
+        <select id="userRole">
+
+            <option value="viewer">
+                Viewer
+            </option>
+
+            <option value="admin">
+                Admin
+            </option>
+
+        </select>
+
+
+        <div
+            id="userMessage"
+        ></div>
+
+
+        <div class="modal-buttons">
+
+            <button
+                id="saveUserBtn"
+            >
+                إنشاء المستخدم
+            </button>
+
+            <button
+                id="closeUserBtn"
+            >
+                إلغاء
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script src="js/config.js"></script>
