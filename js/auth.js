@@ -138,8 +138,9 @@ function showApp() {
     loadDashboard();
 
     loadEmployees();
-}
 
+    loadUsers();
+}
 
 function showLogin() {
 
