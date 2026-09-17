@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>نظام إدارة الموظفين</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- Login -->
+        <section id="loginPage">
+
+            <div class="login-box">
+
+                <h1>نظام إدارة الموظفين</h1>
+
+                <p>تسجيل دخول الإدارة</p>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="البريد الإلكتروني"
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="كلمة المرور"
+                >
+
+                <button id="loginBtn">
+                    تسجيل الدخول
+                </button>
+
+                <div id="loginMessage"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main App -->
+        <section id="mainApp" class="hidden">
+
+            <header class="topbar">
+
+                <div>
+                    <h2>نظام إدارة الموظفين</h2>
+                </div>
+
+                <button id="logoutBtn">
+                    تسجيل الخروج
+                </button>
+
+            </header>
+
+
+            <main>
+
+                <div class="dashboard">
+
+                    <div class="stat-card">
+
+                        <span>إجمالي الموظفين</span>
+
+                        <strong id="totalEmployees">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>الموظفين النشطين</span>
+
+                        <strong id="activeEmployees">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>الإنذارات</span>
+
+                        <strong id="totalWarnings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>الخصومات</span>
+
+                        <strong id="totalDeductions">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="content">
+
+                    <div class="section-header">
+
+                        <h2>
+                            الموظفين
+                        </h2>
+
+                        <button id="addEmployeeBtn">
+                            + إضافة موظف
+                        </button>
+
+                    </div>
+
+
+                    <div class="search-area">
+
+                        <input
+                            type="text"
+                            id="searchEmployee"
+                            placeholder="بحث باسم الموظف..."
+                        >
+
+                    </div>
+
+
+                    <div
+                        id="employeesContainer"
+                        class="employees-grid">
+                    </div>
+
+                </div>
+
+            </main>
+
+        </section>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
