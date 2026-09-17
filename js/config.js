@@ -1,8 +1,8 @@
 const SUPABASE_URL =
-    "PUT_YOUR_SUPABASE_URL_HERE";
+    "https://axnlxpovmzywxxevbxzl.supabase.co/rest/v1/";
 
 const SUPABASE_ANON_KEY =
-    "PUT_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE";
+    "sb_publishable_aDPLD5i9xtAtsl8wxBUHsw_4TySYnqi";
 
 const supabaseClient =
     window.supabase.createClient(
